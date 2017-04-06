@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">NewsMvp</string>
+    <string name="tab1">头条</string>
+    <string name="tab2">社会</string>
+    <string name="tab3">国内</string>
+    <string name="tab4">国际</string>
+    <string name="tab6">娱乐</string>
+    <string name="tab5">体育</string>
+    <string name="tab7">军事</string>
+    <string name="tab8">科技 </string>
+    <string name="tab9">财经</string>
+    <string name="tab10">时尚 </string>
+    <string name="tip_drag">长按编辑,拖拽排序</string>
+    <string name="my_cahnnel">我的频道</string>
+    <string name="other_channel">其他频道</string>
+    <string name="edit">编辑</string>
+    <string name="finish">完成</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

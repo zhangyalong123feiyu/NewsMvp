@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".pro.activity.MainActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:background="?attr/mainBackground"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:fitsSystemWindows="true"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"></android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragementcontainer"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="match_parent" />
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:clickable="true"
+        android:background="?attr/mainBackground">
+
+        <RelativeLayout
+            android:id="@+id/ralv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_light">
+
+            <ImageView
+                android:id="@+id/headphoto"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/protrait" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/headphoto"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="范春燕"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ralv1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/news"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onTabClicked"
+                android:paddingLeft="30dp"
+                android:clickable="true"
+                android:drawableLeft="@android:drawable/ic_input_get"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="新闻" />
+
+            <TextView
+                android:id="@+id/pics"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onTabClicked"
+                android:clickable="true"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@android:drawable/ic_menu_gallery"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="图片" />
+
+            <TextView
+                android:id="@+id/weather"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:onClick="onTabClicked"
+                android:clickable="true"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@android:drawable/ic_dialog_dialer"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="趣味问答" />
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onTabClicked"
+                android:clickable="true"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@android:drawable/ic_dialog_info"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="视频大全" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#d9d9d9" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onTabClicked"
+                android:clickable="true"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@android:drawable/ic_menu_share"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="分享" />
+
+            <TextView
+                android:id="@+id/dayandnight"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onTabClicked"
+                android:clickable="true"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@android:drawable/btn_star_big_on"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="日夜间切换" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

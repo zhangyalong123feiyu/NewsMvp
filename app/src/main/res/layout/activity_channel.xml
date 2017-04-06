@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafaf8">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="频道管理"
+        android:textSize="15sp"
+        app:layout_scrollFlags="scroll|enterAlways" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/mychannel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="我的频道" />
+
+            <TextView
+                android:id="@+id/edit"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:background="@drawable/selector"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="编辑" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mychneelrecylerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit"
+
+                android:layout_marginTop="10dp"
+                android:fillViewport="true" />
+
+            <TextView
+                android:id="@+id/recommedchannel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mychneelrecylerview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="我的频道" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/allchannelrecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recommedchannel"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

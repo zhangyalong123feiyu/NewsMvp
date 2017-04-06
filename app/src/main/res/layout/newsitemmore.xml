@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/mainBackground"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titlenews"
+            android:layout_width="match_parent"
+            android:text="zhangyalong"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="0dp"
+                android:scaleType="fitXY"
+                android:transitionName="transname"
+                android:layout_marginLeft="5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="0dp"
+                android:scaleType="fitXY"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="0dp"
+                android:scaleType="fitXY"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titletime"
+            android:layout_width="wrap_content"
+            android:text="zhangyalong"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
