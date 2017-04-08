@@ -34,5 +34,6 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.4.0'
     compile 'com.android.support:cardview-v7:23.1.0'
     compile project(':gsyVideoPlayer')
+    compile 'com.linsea:opendanmaku:1.0.0@aar'
 
 }

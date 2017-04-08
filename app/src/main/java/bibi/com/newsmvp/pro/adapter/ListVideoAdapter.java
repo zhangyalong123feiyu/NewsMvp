@@ -11,6 +11,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.opendanmaku.DanmakuItem;
+import com.opendanmaku.DanmakuView;
+import com.opendanmaku.IDanmakuItem;
 import com.shuyu.gsyvideoplayer.utils.ListVideoUtil;
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
 
@@ -42,12 +45,15 @@ public class ListVideoAdapter extends BaseAdapter {
     private boolean isFullVideo;
 
     private ListVideoUtil listVideoUtil;
+    private List<IDanmakuItem> danmuklist = new ArrayList<>();
 
     public ListVideoAdapter(Context context, ListVideoUtil listVideoUtil) {
         super();
         this.context = context;
         this.listVideoUtil = listVideoUtil;
-
+        danmuklist.add(new DanmakuItem(context, "zhangyalong", 100));
+        danmuklist.add(new DanmakuItem(context, "fanchunyan", 100));
+        danmuklist.add(new DanmakuItem(context, "号店", 100));
         inflater = LayoutInflater.from(context);
         for (int i = 0; i < 40; i++) {
             list.add(new VideoModel());
@@ -78,8 +84,10 @@ public class ListVideoAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.list_video_item, null);
             holder.videoContainer = (FrameLayout) convertView.findViewById(R.id.list_item_container);
             holder.playerBtn = (ImageView) convertView.findViewById(R.id.list_item_btn);
+            holder.danmakuView = (DanmakuView) convertView.findViewById(R.id.danmakuview);
             holder.imageView = new ImageView(context);
             convertView.setTag(holder);
+
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
@@ -87,8 +95,10 @@ public class ListVideoAdapter extends BaseAdapter {
         //增加封面
 
         holder.imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        holder.imageView.setImageResource(R.drawable.video_forward_icon);
+        holder.imageView.setImageResource(R.mipmap.xxx1);
         // Glide.with(context).load("http://baobab.wdjcdn.com/14564977406580.mp4").asGif().into(holder.imageView);
+        holder.danmakuView.addItem(danmuklist, false);
+        holder.danmakuView.show();
         listVideoUtil.addVideoPlayer(position, holder.imageView, TAG, holder.videoContainer, holder.playerBtn);
 
         holder.playerBtn.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +119,7 @@ public class ListVideoAdapter extends BaseAdapter {
         FrameLayout videoContainer;
         ImageView playerBtn;
         ImageView imageView;
+        DanmakuView danmakuView;
     }
 
     public void setRootView(ViewGroup rootView) {
